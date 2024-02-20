@@ -2,4 +2,4 @@
 .out
 *.xml
 *.iml
-/target
+target/
