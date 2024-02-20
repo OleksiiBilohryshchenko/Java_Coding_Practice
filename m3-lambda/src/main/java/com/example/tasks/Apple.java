@@ -16,5 +16,4 @@ public class Apple {
     private Color color;
 
 
-
 }
