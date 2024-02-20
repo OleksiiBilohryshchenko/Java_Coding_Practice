@@ -13,6 +13,8 @@
 *.csv
 
 *.DS_Store
+*.idea
+*.iml
 
 
 
