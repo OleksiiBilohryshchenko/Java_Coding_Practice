@@ -14,8 +14,12 @@ public class AppleTest {
         inventory.add(new Apple(200,Color.GREEN));
         inventory.add(new Apple(50,Color.RED));
 
+        AppleHeavyPredicate ahp = new AppleHeavyPredicate();
+        List<Apple> heavyApple = filterApples(inventory, ahp);
+        System.out.println(heavyApple);
 
-
+        List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
+        System.out.println(greenApple);
     }
 
     private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate){
