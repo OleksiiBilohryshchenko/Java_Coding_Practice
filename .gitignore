@@ -1,44 +1,7 @@
-*.class
-
-*.tmp
-
-*.jar
-
-*.html
-
-*.png
-
-*.json
-
-*.csv
-
-*.DS_Store
-*.idea
-*.iml
-*.xml
-out
-
-
-
-# any eclipse project file.
-
-.eclipse
-
-.classpath
-
-
-
-## All the folders underneath site folder
-
-**/site
-
-site/
-
-site/*
-
-
-
-## target folder at the top level of the project structue and paths and contents underneath it
+.idea
+ out
+ *.xml
+ *.iml
 
 target/
 
