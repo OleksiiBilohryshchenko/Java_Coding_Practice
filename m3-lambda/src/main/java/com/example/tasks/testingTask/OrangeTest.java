@@ -1,4 +1,6 @@
-package com.example.tasks;
+package com.example.tasks.testingTask;
+import com.example.tasks.Color;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class OrangeTest {
         List <Orange> inventory = new ArrayList<>();
 
 
-        inventory.add(new Orange(300,Color.GREEN));
+        inventory.add(new Orange(300, Color.GREEN));
         inventory.add(new Orange(100,Color.RED));
         inventory.add(new Orange(200,Color.GREEN));
         inventory.add(new Orange (50,Color.RED));

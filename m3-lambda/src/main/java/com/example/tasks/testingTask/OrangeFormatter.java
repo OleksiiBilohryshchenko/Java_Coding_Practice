@@ -1,4 +1,4 @@
-package com.example.tasks;
+package com.example.tasks.testingTask;
 
 @FunctionalInterface
 public interface OrangeFormatter {

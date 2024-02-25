@@ -1,5 +1,6 @@
-package com.example.tasks;
+package com.example.tasks.testingTask;
 
+import com.example.tasks.Color;
 import lombok.Getter;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
