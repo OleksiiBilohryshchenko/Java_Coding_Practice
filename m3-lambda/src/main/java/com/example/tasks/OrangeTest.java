@@ -18,7 +18,7 @@ public class OrangeTest {
         OrangeFormatter orangeLambda = orange -> "An orange of " + orange.getWeight() + "g";
         prettyPrintApple(inventory,orangeLambda);
 
-        prettyPrintApple(inventory, orange -> "An orange of " + orange.getWeight() + "g")
+        prettyPrintApple(inventory, orange -> "An orange of " + orange.getWeight() + "g");
 
     }
 
