@@ -22,7 +22,8 @@ public class Main {
 
         // Lambda version
 
-        Collections.sort(list,((o1,o2) -> (o1>o2) ? -1 : (o1<o2) ? 1 : 0));
+        Collections.sort(list, (o1, o2) -> (o1 > o2) ? -1 : ((o1 < o2) ? 1 : 0));
+        System.out.println(list);
 
 
     }
