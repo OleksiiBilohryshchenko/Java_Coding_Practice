@@ -14,22 +14,26 @@ public class StreamOperations {
 
         // Intermediate operations
 
-        // Filter
+        // Filter (filter based on the condition, searching data)
         System.out.println("Filter");
         list.stream().filter(i -> i%2 == 0).forEach(System.out::println);
 
-        // Distinct
+        // Distinct (unique elements)
         System.out.println("Distinct");
         Stream<Integer> str= list.stream().filter(i->i%2==0).distinct();
         str.forEach(System.out::println);
 
-        // Limit
+        // Limit (limit showing elements)
         System.out.println("Limit");
         list.stream().filter(i->i%2==0).limit(1).forEach(System.out::println);
 
-        // Skip
+        // Skip (skip element)
         System.out.println("Skip");
         list.stream().filter(i->i%2==0).skip(1).forEach(System.out::println);
+
+        // Map (manipulate each object, change characteristics of the object)
+        System.out.println("Map");
+        list.stream().filter(i->i%2==0).map(i->i*3).forEach(System.out::println);
 
     }
 
