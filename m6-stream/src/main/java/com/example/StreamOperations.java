@@ -27,6 +27,10 @@ public class StreamOperations {
         System.out.println("Limit");
         list.stream().filter(i->i%2==0).limit(1).forEach(System.out::println);
 
+        // Skip
+        System.out.println("Skip");
+        list.stream().filter(i->i%2==0).skip(1).forEach(System.out::println);
+
     }
 
 
