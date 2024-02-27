@@ -23,6 +23,10 @@ public class StreamOperations {
         Stream<Integer> str= list.stream().filter(i->i%2==0).distinct();
         str.forEach(System.out::println);
 
+        // Limit
+        System.out.println("Limit");
+        list.stream().filter(i->i%2==0).limit(1).forEach(System.out::println);
+
     }
 
 
