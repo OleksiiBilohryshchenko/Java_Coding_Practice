@@ -4,6 +4,7 @@ import com.example.task.Dish;
 import com.example.task.DishData;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class FindingMatching {
 
@@ -28,6 +29,13 @@ public class FindingMatching {
         Optional<Dish> dish = DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
         System.out.println(dish.get());
 
+        System.out.println("findFirst - return first match");
+        Optional<Dish> dish2 = DishData.getAll().stream().filter(Dish::isVegetarian).findAny();
+        System.out.println(dish2.get());
+
+        //Parallel streams (Async) -> Reactive Programming
+        System.out.println(IntStream.range(0,100).parallel().findAny());
+        System.out.println(IntStream.range(0,100).parallel().findFirst());
 
 
     }
