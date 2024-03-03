@@ -3,6 +3,8 @@ package com.example;
 import com.example.task.Dish;
 import com.example.task.DishData;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -36,6 +38,15 @@ public class FindingMatching {
         //Parallel streams (Async) -> Reactive Programming
         System.out.println(IntStream.range(0,100).parallel().findAny());
         System.out.println(IntStream.range(0,100).parallel().findFirst());
+
+        List<String> list1 = Arrays.asList("Mark", "Leo", "Alex", "John", "Kent", "Lucy", "Lana", "Mary", "Victoria");
+        List<String> list2 = Arrays.asList("Mark", "Leo", "Alex", "John", "Kent", "Lucy", "Lana", "Mary", "Victoria");
+
+        Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("L")).findFirst();
+        Optional<String> findAny = list1.parallelStream().filter(s -> s.startsWith("L")).findAny();
+
+        System.out.println(findFirst);
+        System.out.println(findAny);
 
 
     }
