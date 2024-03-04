@@ -4,6 +4,7 @@ import com.example.task.Dish;
 import com.example.task.DishData;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
@@ -45,8 +46,21 @@ public class FindingMatching {
         Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("L")).findFirst();
         Optional<String> findAny = list1.parallelStream().filter(s -> s.startsWith("L")).findAny();
 
-        System.out.println(findFirst);
-        System.out.println(findAny);
+//        Optional<String> findFirst = list1.stream().filter(s -> s.startsWith("L")).findFirst();
+//        Optional<String> findAny = list1.stream().filter(s -> s.startsWith("L")).findAny();
+
+
+        System.out.println(findFirst.get()); // Leo - first L
+        System.out.println(findAny.get()); // Lucy - any L
+
+        // MIN AND MAX
+        System.out.println("Min");
+        Optional<Dish> dMin = DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+        System.out.println(dMin.get());
+
+        System.out.println("Max");
+        Optional<Dish> dMax = DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(dMax.get());
 
 
     }
