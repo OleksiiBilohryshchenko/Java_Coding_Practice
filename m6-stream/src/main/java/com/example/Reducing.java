@@ -3,6 +3,7 @@ package com.example;
 import com.example.task.Dish;
 import com.example.task.DishData;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -37,6 +38,11 @@ public class Reducing {
         System.out.println(min.get());
         System.out.println(max.get());
         System.out.println(sum.get());
+
+        //Count -how many
+        System.out.println("Count");
+        long dishCount = DishData.getAll().stream().count();
+        System.out.println(dishCount);
 
     }
 
