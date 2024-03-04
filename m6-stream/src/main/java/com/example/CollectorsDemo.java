@@ -2,6 +2,7 @@ package com.example;
 
 import com.example.task.Dish;
 import com.example.task.DishData;
+import com.example.task.Type;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -77,6 +78,11 @@ public class CollectorsDemo {
                 .collect(Collectors.partitioningBy(Dish::isVegetarian));
         System.out.println(veggieDish);
 
+        //groupingBy(): is used for grouping objects by some properties and storing results in a Map instance
+
+        Map<Type, List<Dish>> dishType = DishData.getAll().stream()
+                .collect(Collectors.groupingBy(Dish::getType));
+        System.out.println(dishType);
 
     }
 
