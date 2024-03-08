@@ -83,7 +83,7 @@ public class SwitchCaseDemo {
                     System.out.println("Enter year:");
                     int year = scanner.nextInt();
 
-                    if(year %4 == 0)
+                    if(((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)))
                         yield 29;
                     else
                         yield 28;
