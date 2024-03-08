@@ -8,8 +8,8 @@ public class CopyOfDemo {
 
         List<Integer> numberList = Arrays.asList(2,4,6,8);
 
-        List<Integer> unmodifiableList1 = List.of(2,4,6,8);
-        List<Integer> unmodifiableList2 = List.copyOf(numberList);
+        List<Integer> unmodifiableList1 = List.of(2,4,6,8); //takes values
+        List<Integer> unmodifiableList2 = List.copyOf(numberList); //takes List
 
     }
 
